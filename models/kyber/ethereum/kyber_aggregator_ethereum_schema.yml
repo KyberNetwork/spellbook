@@ -1,0 +1,57 @@
+version: 2
+
+models:
+  - name: kyber_aggregator_ethereum 
+    meta:
+      blockchain: ethereum 
+      sector: dex 
+      project: kyber
+      contributors: halink0803 
+    config:
+      tags: ['dex', 'ethereum', 'aggregator', 'kyber', 'kyberswap', trades]
+    description: >
+        KyberSwap DEX aggregators
+    columns:
+      - &blockchain
+        name: blockchain
+        description: "chain that aggregator router contract is deployed"
+      - &project
+        name: project 
+        description: "project name of the DEX"
+      - &version
+        name: version
+        description: "the version of aggregator contract"
+      - &block_number
+        name: block_number
+        description: "block number of the trade"
+      - &src_symbol
+        name: src_token_symbol
+        description: "the symbol of source"
+      - &src_address
+        name: src_address
+        description: "contract address of src token"
+      - &src_decimals
+        name: src_decimals
+        description: "decimals of src token"
+      - &src_amount
+        name: src_amount
+        description: "amount of src token"
+      - &src_usd_value:
+        name: src_usd_value
+        description: "the usd equivalent of src token"
+      - &dst_symbol
+        name: dst_token_symbol
+        description: "the symbol of dest token"
+      - &dst_address
+        name: dst_address
+        description: "contract address of dst token"
+      - &dst_decimals
+        name: dst_decimals
+        description: "decimals of dst token"
+      - &dst_amount
+        name: dst_amount
+        description: "amount of dst token"
+      - &dst_usd_value:
+        name: dst_usd_value
+        description: "the usd equivalent of dst token"
+
